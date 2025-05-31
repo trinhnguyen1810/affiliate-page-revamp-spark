@@ -35,30 +35,34 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-4xl mx-auto">
+    <section className="relative py-20 px-4 bg-gradient-to-b from-white to-blue-50/30">
+      {/* Background elements */}
+      <div className="absolute top-16 right-16 w-20 h-20 bg-blue-200/20 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-20 left-20 w-16 h-16 bg-emerald-200/20 rounded-full animate-bounce"></div>
+      
+      <div className="max-w-4xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 rounded-full text-sm font-medium mb-8 shadow-sm">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm text-blue-700 rounded-full text-sm font-medium mb-8 shadow-sm border border-blue-200">
             Got Questions?
           </div>
-          <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-600 leading-relaxed">
             Everything you need to know about our affiliate program
           </p>
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-4 mb-16">
+        <div className="space-y-4 mb-12">
           {faqs.map((faq, index) => (
             <Card 
               key={index}
-              className="border-2 border-gray-200 hover:border-blue-300 transition-all duration-300 overflow-hidden rounded-2xl hover:shadow-lg"
+              className="border border-gray-200 hover:border-blue-300 transition-all duration-300 overflow-hidden rounded-xl hover:shadow-lg bg-white/80 backdrop-blur-sm"
             >
               <button
-                className="w-full text-left p-8 focus:outline-none"
+                className="w-full text-left p-6 focus:outline-none"
                 onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
               >
                 <div className="flex justify-between items-center">
@@ -78,9 +82,9 @@ const FAQ = () => {
               </button>
               
               {openIndex === index && (
-                <CardContent className="px-8 pb-8 pt-0">
-                  <div className="border-t border-gray-100 pt-6">
-                    <p className="text-gray-600 leading-relaxed text-lg">
+                <CardContent className="px-6 pb-6 pt-0">
+                  <div className="pt-4 border-t border-gray-100">
+                    <p className="text-gray-600 leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
@@ -92,10 +96,10 @@ const FAQ = () => {
 
         {/* Bottom CTA */}
         <div className="text-center">
-          <p className="text-xl text-gray-600 mb-8">Still have questions?</p>
+          <p className="text-lg text-gray-600 mb-6">Still have questions?</p>
           <Button 
             size="lg"
-            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-10 py-4 text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0"
+            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0"
           >
             Contact our affiliate support team
             <ArrowRight className="ml-3 h-5 w-5" />
