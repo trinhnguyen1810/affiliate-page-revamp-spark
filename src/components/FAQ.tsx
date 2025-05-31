@@ -35,10 +35,11 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="relative py-20 px-4 bg-gradient-to-b from-white to-blue-50/30">
+    <section className="relative py-20 px-4 bg-gradient-to-br from-white via-blue-50/30 to-emerald-50/20 overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-16 right-16 w-20 h-20 bg-blue-200/20 rounded-full animate-pulse"></div>
       <div className="absolute bottom-20 left-20 w-16 h-16 bg-emerald-200/20 rounded-full animate-bounce"></div>
+      <div className="absolute top-1/2 left-1/3 w-12 h-12 bg-blue-300/15 rounded-full animate-pulse delay-1000"></div>
       
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Header */}

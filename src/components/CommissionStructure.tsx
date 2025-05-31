@@ -42,11 +42,12 @@ const plans = [
 
 const CommissionStructure = () => {
   return (
-    <section className="relative py-20 px-4 bg-gradient-to-b from-white via-gray-50/50 to-blue-50/30">
+    <section className="relative py-20 px-4 bg-gradient-to-br from-blue-50/40 via-white to-emerald-50/30 overflow-hidden">
       {/* Background animated elements */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-blue-200/20 rounded-full animate-pulse"></div>
       <div className="absolute bottom-20 right-20 w-24 h-24 bg-emerald-200/20 rounded-full animate-bounce"></div>
       <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-blue-300/20 rounded-full animate-pulse delay-500"></div>
+      <div className="absolute top-20 right-10 w-20 h-20 bg-emerald-300/15 rounded-full animate-bounce delay-700"></div>
       
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
@@ -129,13 +130,6 @@ const CommissionStructure = () => {
             <div className="text-gray-600">Cookie Duration</div>
           </div>
         </div>
-      </div>
-      
-      {/* Wave transition */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-12">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-white"></path>
-        </svg>
       </div>
     </section>
   );
