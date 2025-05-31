@@ -1,14 +1,14 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, HandCoins, ArrowRight as TrendingUp, CircleDollarSign } from 'lucide-react';
+import { ArrowRight, Zap, TrendingUp, Shield } from 'lucide-react';
 
 const features = [
   {
-    icon: HandCoins,
+    icon: Zap,
     title: 'Quick Setup',
     description: 'Get started in under 5 minutes with our streamlined onboarding process',
-    color: 'green'
+    color: 'emerald'
   },
   {
     icon: TrendingUp,
@@ -17,31 +17,31 @@ const features = [
     color: 'blue'
   },
   {
-    icon: CircleDollarSign,
+    icon: Shield,
     title: 'Reliable Payouts',
     description: 'Get paid every two weeks with multiple secure payment options',
-    color: 'purple'
+    color: 'indigo'
   }
 ];
 
 const CTASection = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white relative overflow-hidden">
+    <section className="py-20 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-10 left-10 w-32 h-32 bg-blue-400 rounded-full opacity-10 animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-20 h-20 bg-purple-400 rounded-full opacity-10 animate-bounce"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-green-400 rounded-full opacity-10"></div>
+      <div className="absolute top-20 left-20 w-64 h-64 bg-blue-500 rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-20 right-20 w-48 h-48 bg-indigo-500 rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-emerald-500 rounded-full opacity-10 blur-2xl"></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-800 text-blue-200 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center px-6 py-3 bg-blue-800/50 backdrop-blur-sm text-blue-200 rounded-full text-sm font-medium mb-8 border border-blue-700/30">
             Join 10,000+ Successful Affiliates
           </div>
           
-          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8">
             Ready to Start{' '}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
               Earning?
             </span>
           </h2>
@@ -57,11 +57,11 @@ const CTASection = () => {
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
-              <div key={feature.title} className="text-center">
-                <div className={`w-16 h-16 rounded-2xl bg-${feature.color}-500 flex items-center justify-center mx-auto mb-4`}>
+              <div key={feature.title} className="text-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-${feature.color}-500 to-${feature.color}-600 flex items-center justify-center mx-auto mb-6 shadow-lg`}>
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
                 <p className="text-blue-200 leading-relaxed">{feature.description}</p>
               </div>
             );
@@ -72,13 +72,13 @@ const CTASection = () => {
         <div className="text-center">
           <Button 
             size="lg"
-            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-12 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 border-0"
+            className="bg-gradient-to-r from-blue-500 to-emerald-500 hover:from-blue-600 hover:to-emerald-600 text-white px-12 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 border-0"
           >
             Join Now - Start Earning Today
             <ArrowRight className="ml-3 h-6 w-6" />
           </Button>
           
-          <p className="text-blue-200 text-sm mt-4">
+          <p className="text-blue-200 text-sm mt-6">
             Free to join • No setup fees • Start earning immediately
           </p>
         </div>
