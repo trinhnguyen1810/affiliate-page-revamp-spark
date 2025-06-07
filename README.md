@@ -2,7 +2,9 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/20c9b76e-3c6d-4568-9f83-96bde7e377ce
+**URL**: affiliate-page-revamp-spark.lovable.app
+
+
 
 ## How can I edit this code?
 
