@@ -22,6 +22,22 @@ const plans = [
     borderColor: 'border-blue-200'
   },
   {
+    name: 'Pro Plan',
+    commission: '35%',
+    popular: false,
+    features: [
+      '35% commission on all sales',
+      '60-day cookie duration',
+      'Basic tracking and analysis',
+      'Enhanced reporting',
+      'Priority email support'
+    ],
+    buttonText: 'Start Earning 35%',
+    gradient: 'from-indigo-500 to-indigo-600',
+    bgGradient: 'from-indigo-50/50 to-white',
+    borderColor: 'border-indigo-200'
+  },
+  {
     name: 'Premium Plan',
     commission: '50%',
     popular: true,
@@ -65,7 +81,7 @@ const CommissionStructure = () => {
         </div>
 
         {/* Compact Plans Grid */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
           {plans.map((plan) => (
             <Card 
               key={plan.name}

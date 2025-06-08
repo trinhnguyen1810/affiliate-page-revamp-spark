@@ -16,15 +16,6 @@ const steps = [
   },
   {
     id: 2,
-    title: 'Configure Payment',
-    description: 'Set up PayPal or bank transfer with secure encrypted details.',
-    icon: HandCoins,
-    color: 'green',
-    bgGradient: 'from-green-500 to-green-600',
-    lightBg: 'from-green-50 to-green-100'
-  },
-  {
-    id: 3,
     title: 'Share & Promote',
     description: 'Get unique referral links and start sharing across your channels.',
     icon: Share,
@@ -33,7 +24,7 @@ const steps = [
     lightBg: 'from-indigo-50 to-indigo-100'
   },
   {
-    id: 4,
+    id: 3,
     title: 'Receive Payment',
     description: 'Get paid bi-weekly with real-time tracking and analytics.',
     icon: CircleDollarSign,
@@ -62,7 +53,7 @@ const HowItWorks = () => {
             How It Works
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Start earning in 4 simple steps. No technical knowledge required.
+            Start earning in 3 simple steps. No technical knowledge required.
           </p>
         </div>
 
@@ -104,7 +95,7 @@ const HowItWorks = () => {
           </div>
 
           {/* Steps */}
-          <div className="grid lg:grid-cols-4 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8">
             {steps.map((step, index) => {
               const Icon = step.icon;
               
